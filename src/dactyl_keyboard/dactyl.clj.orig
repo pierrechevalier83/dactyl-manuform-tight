@@ -640,7 +640,7 @@
              (extrude-linear {:height bottom-height-half :twist 0 :convexity 0}
                              (offset 3 ))))
 
-(def screw-head-height 3.5)
+(def screw-head-height 2.5)
 (def layer-height 0.05)
 (def bottom-screw-holes-head
   (translate [0 0 (- bottom-height)] (screw-insert-all-shapes 3.5 1.75 screw-head-height)))
