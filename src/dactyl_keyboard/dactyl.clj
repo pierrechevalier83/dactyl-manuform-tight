@@ -522,7 +522,7 @@
 
 (defn screw-insert-all-shapes [bottom-radius top-radius height]
   (union (screw-insert 2 0 bottom-radius top-radius height [7.5 5.5 bottom-height]) ; top middle
-         (screw-insert 0 1 bottom-radius top-radius height [-3 -31 bottom-height]) ; left
+         (screw-insert 0 1 bottom-radius top-radius height [-3.5 -31 bottom-height]) ; left
          (screw-insert (- lastcol 1) 0 bottom-radius top-radius height [27 -4.5 bottom-height]) ; top right
          (screw-insert 2 (+ lastrow 1) bottom-radius top-radius height [-11 7 bottom-height]))) ;bottom middle
 
@@ -530,8 +530,8 @@
 (def screw-insert-height 6)
 
 ; Hole Diameter C: 6-5.5 (6mm inserts)
-(def screw-insert-bottom-radius (/ 6.5 2))
-(def screw-insert-top-radius (/ 6 2))
+(def screw-insert-bottom-radius (/ 6 2))
+(def screw-insert-top-radius (/ 5.5 2))
 (def screw-insert-holes (screw-insert-all-shapes screw-insert-bottom-radius screw-insert-top-radius screw-insert-height))
 
 ; Wall Thickness W:\t1.65
